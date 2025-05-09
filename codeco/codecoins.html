@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: cursive; /* Fuente cursiva para todo el contenido */
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .logo img {
+            height: 120px;
+            margin-right: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        main p {
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-family: cursive; /* Fuente cursiva para los títulos */
+        }
+
+        .mision-vision-valores {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .mision-vision-valores div {
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #2f2c7f;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .footer div {
+            flex: 1;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .footer .social-icons a {
+            margin: 0 10px;
+        }
+
+        .footer .social-icons img {
+            height: 30px;
+        }
+
+        .footer .audio-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .footer .audio-icons a {
+            margin: 0 10px;
+        }
+
+        .footer .audio-icons img {
+            height: 30px;
+        }
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        padding: 20px;
+    }
+
+    .form-container {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: cursive;
+    }
+
+    /* Grupos de formulario */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #555;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    input:focus {
+        border-color: #28a745;
+        outline: none;
+        box-shadow: 0 0 5px rgba(40, 167, 69, 0.2);
+    }
+
+    /* Botón de envío */
+    button[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #218838;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+    }
+
+    button[type="submit"]:active {
+        transform: translateY(0);
+    }
+
+    /* Estilos responsivos */
+    @media screen and (max-width: 768px) {
+        .form-container {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 12px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .form-container {
+            padding: 15px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        input {
+            font-size: 14px;
+        }
+
+        button[type="submit"] {
+            font-size: 14px;
+        }
+    }
+    </style>
+</head>
+</head>
+<body>
+<div class="nav-container">
+  <div class="logo">
+      <img src="logo.jfif" alt="Logo">
+  </div>
+  <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="codeconosotros.html">Nosotros</a></li>
+      <li><a href="codecoins.html">Inscripciones</a></li>
+      <li><a href="codecocont.html">Contacto</a></li>
+  </ul>
+</div>
+
+<style>
+  /* Estilos generales */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+  }
+
+  /* Contenedor principal para centrar el formulario */
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+  }
+
+  /* Caja del formulario */
+  .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 500px; /* Aumenté el ancho del formulario */
+      text-align: center;
+  }
+
+  .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+  }
+
+  label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+  }
+
+  .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+  }
+
+  .btn:hover {
+      background-color: #218838;
+  }
+</style>
+          
+          <body>
+          
+          <!-- Contenedor principal -->
+          <div class="container">
+              <div class="form-container">
+                  <h2>Formulario de Inscripción</h2>
+                  <form action="procesar_inscripcion.php" method="post">
+                    <label>Nombre: <input type="text" name="nombre" required></label><br>
+                    <label>Apellido: <input type="text" name="apellido" required></label><br>
+                    <label>Correo electrónico: <input type="email" name="correo" required></label><br>
+                    <label>Teléfono: <input type="text" name="telefono"></label><br>
+                    <label>Cédula: <input type="text" name="cedula" required></label><br>
+                    <label>Fecha de nacimiento: <input type="date" name="fecha_nacimiento" required></label><br><br>
+                    <!-- Botón de envío corregido -->
+                    <button type="submit">Enviar inscripción</button>
+                  </form>
+              </div>
+          </div>
+          
+          </body>
+          
+<?php
+    header("Location: salida.html");
+exit();
+?>
+
+</body>
+</html>
